@@ -47,13 +47,13 @@ User sees facts
 ```
 **Fetch API usage:** The page uses asynchronous GET with fetch like async/await. The request header is Accept: application/json. I will check response.ok since fetch does not fail on 4xx or 5xx by itself, then I will call response.json().
 
-**Loading state:** 
+**Loading state:** Before the fetch starts, it will show a "loading" message and will disable the button so the user cannot click it twice.
 
-**Error handling:**
+**Error handling:** A network error will return JSON and an HTTP error will return the status code from the public API. The error will show in a red box instead of crashing and if the list is empty it will come back "no facts found". 
 
-**Dynamic rendering:**
+**Dynamic rendering:** The JSON list is looped over so each fact will become one table row showing the text, source, and last updated date.
 
-**Conditional styling:**
+**Conditional styling:** A CSS class will be chosen for each fact based on the data. A fact with a setcount of 0 gets the new class with green text and a class with a setcount of 5 or more will get a class of popular with a highlighted background. 
 
 ---
 
@@ -77,5 +77,11 @@ The backend is written inside a virtual environment like venv. I will use Flask 
 
 ---
 ## Implementation Steps 
+First I will start by setting up my project folder and virtual environment by installing Flask and request, creating app.py and testing to make sure everything runs. </br>
+Second I will implement the fetch GET with loading and error states. </br>
+Third I will render the dynamic list or table by looping through the JSON and building a row for each fact. </br>
+Fourth I will add the form controls and validation. I will build the filter and feedback form, add validation rules, and build the JSON. </br>
+Fifth I will add the conditional styling by adding CSS classes and applying them based on each fact's data.</br>
+Finally I will review and document. I will test everything in my browser and use curl. I will add my README and add everything to GitHub.
 
 ---
