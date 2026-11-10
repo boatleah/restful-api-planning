@@ -50,7 +50,17 @@ User sees facts
 
 
 ---
+
 ## Form Handling 
+
+**Fetch API usage:** 
+
+| Field | Control       | Validation     | 
+|------|----------------|-------------|
+|amount   |Number input   |Required, Number 1-20   | 
+|fact_id   |Hidden input   |Required, not empty   | 
+|rating   |Radio button 1-5   |Required, one choice only   | 
+
 
 ---
 ## Technology Stack
